@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect } from "react";
+import { Route, useHistory } from "react-router-dom";
+import { Switch } from "react-router-dom";
+import { StockList } from "./StockList";
+import { StockDetails } from "./StockDetails";
+import { NotFound } from "./NotFound";
 
 function App() {
+  // const codes =["BAC","GE","F","MSFT","NFLX","NVDA"];
+  const codes = [{code:"BAC",name:"Bank of America Corp",color:"blue"}, {code:"NFLX",name:"Netflix",color:"red"}];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Switch>
+        <Route path="/stock/:code">
+          <StockDetails codes={codes} />
+        </Route>
+        <Route path="/" exact>
+          <StockList codes={codes}/>
+        </Route>
+        <Route path="**">
+          <NotFound/>
+        </Route>
+      </Switch>
     </div>
   );
 }
