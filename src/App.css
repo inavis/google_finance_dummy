@@ -89,3 +89,46 @@
 .font-large{
   font-size: 26px;
 }
+
+.main-row{
+  height: 20px;
+}
+
+.sub-row{
+  background-color: gray;
+  border: 1px solid darkgray;
+  text-align: center;
+  height: 25px;
+  padding: 5px;
+
+  display: inline-block;
+  flex-basis: 100px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.sub-row-left{
+  background-color: gray;
+  border: 1px solid darkgray;
+  text-align: center;
+  height: 25px;
+  padding: 5px;
+}
+
+.sub-row-2{
+  display: block;
+  height: 25px;
+  padding: 5px;
+  border: 1px solid darkgray;
+}
+.fill{
+  background-color: red;
+  text-align: center;
+  height: 10px;
+  margin: 7px 0;
+}
+.sub-row-2:nth-child(1){
+  margin-top: 15px;
+}
+.p-x{
+  padding:0 2px;
+}

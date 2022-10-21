@@ -6,6 +6,7 @@ import { Switch } from "react-router-dom";
 import { StockList } from "./StockList";
 import { StockDetails } from "./StockDetails";
 import { NotFound } from "./NotFound";
+import { Gaant } from "./Gaant";
 
 function App() {
   // const codes =["BAC","GE","F","MSFT","NFLX","NVDA"];
@@ -15,6 +16,9 @@ function App() {
     <div className="App">
 
       <Switch>
+        <Route path="/tasks">
+          <Gaant/>
+        </Route>
         <Route path="/stock/:code">
           <StockDetails codes={codes} />
         </Route>
