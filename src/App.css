@@ -1,3 +1,6 @@
+.main{
+  -webkit-overflow-scrolling: touch;
+}
 .flex{
   display: flex;
   flex: 1;
@@ -89,13 +92,41 @@
 .font-large{
   font-size: 26px;
 }
-
+.float-right{
+  float:right;
+}
+.float-left{
+  float: left;
+}
+.purple-box{
+  color: rgb(97, 11, 97);
+  font-weight: bold;
+  background-color: rgb(166, 147, 166) !important;
+}
+.chart{
+  width: 98%;
+  margin: 1%;
+   display: flex;
+   flex-direction: row;
+   height: 300px;
+   overflow-y: auto;
+}
+.chart-title{
+  width: 30%; 
+}
+.chart-values{
+  width: 70%; 
+}
 .main-row{
-  height: 20px;
+  height: 25px;
+
+}
+.title{
+  margin: 1%;
 }
 
 .sub-row{
-  background-color: gray;
+  /* background-color: gray; */
   border: 1px solid darkgray;
   text-align: center;
   height: 25px;
@@ -107,7 +138,7 @@
   flex-shrink: 0;
 }
 .sub-row-left{
-  background-color: gray;
+  /* background-color: gray; */
   border: 1px solid darkgray;
   text-align: center;
   height: 25px;
@@ -115,20 +146,86 @@
 }
 
 .sub-row-2{
-  display: block;
+  /* display: block; */
   height: 25px;
   padding: 5px;
+
+
   border: 1px solid darkgray;
 }
+.sub-row-2 div{
+  
+}
 .fill{
-  background-color: red;
+  /* background-color: red; */
   text-align: center;
   height: 10px;
   margin: 7px 0;
+  border-radius: 5px;
 }
 .sub-row-2:nth-child(1){
-  margin-top: 15px;
+  margin-top: 12px;
 }
 .p-x{
-  padding:0 2px;
+  padding:2px 2px;
+}
+
+.sub-row-left{
+  /* width: 280px; */
+  text-align: left !important;
+  overflow-x: auto;
+}
+
+
+/* width */
+.sub-row-left::-webkit-scrollbar {
+  width: 1px;
+}
+.chart::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+.sub-row-left::-webkit-scrollbar-track,.chart::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.sub-row-left::-webkit-scrollbar-thumb,.chart::-webkit-scrollbar-thumb {
+  background: rgb(206, 206, 206);
+}
+
+/* Handle on hover */
+.sub-row-left::-webkit-scrollbar-thumb:hover,.chart::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+button{
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  margin: 1%;
+}
+.red-cross{
+  height: 50px;
+  width: 50px;
+}
+.red-arrow{
+  height: 70px;
+  width: 70px;
+}
+button:hover,.red-cross:hover{
+  cursor: pointer;
+}
+
+@media (max-width:767px){
+  .sub-row,.sub-row-left,.sub-row-2{
+    height: 45px;
+    padding-top: 23px;
+  }
+  .sub-row{
+    height: 45px;
+  }
+  .sub-row-2:nth-child(1){
+    padding-top: 58px;
+  }
 }
